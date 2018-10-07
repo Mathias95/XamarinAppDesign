@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabbedMenu.Page1"
+             Title="HOME">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="0" RowSpacing="0" ColumnSpacing="0" BackgroundColor="#F6F6F6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                
+                <Image Source="map.png" Aspect="AspectFill" Grid.Row="0" Grid.ColumnSpan="5" HeightRequest="240"></Image>
+                <Grid Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="1" ColumnSpacing="0" HeightRequest="55">
+                    <Button Text="TRENDING NOW" Grid.Column="0" Grid.ColumnSpan="1" Margin="0" BorderRadius="0" BorderWidth="0" TextColor="#282828" FontSize="13" FontAttributes="Bold" BackgroundColor="White"></Button>
+                    <Button Text="STAFF" Grid.Column="1" Grid.ColumnSpan="1" Margin="0" BorderRadius="0" BorderWidth="0" TextColor="#282828" FontSize="13" FontAttributes="Bold" BackgroundColor="White"></Button>
+                    <Button Text="PUB INFO" Grid.Column="2" Grid.ColumnSpan="1" Margin="0" BorderRadius="0" BorderWidth="0" TextColor="#282828" FontSize="13" FontAttributes="Bold" BackgroundColor="White"></Button>
+                </Grid>
+                <StackLayout Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="2">
+                    <Frame Padding="0" CornerRadius="5" BackgroundColor="White" Margin="10">
+                        <StackLayout>
+                            <FlexLayout JustifyContent="SpaceBetween" Margin="10, 15, 10, 0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="Person.png" WidthRequest="50" HeightRequest="50"></Image>
+                                    <StackLayout>
+                                        <Label Text="Jimena" FontSize="18" TextColor="#282828"></Label>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="TRENDING NOW" FontSize="11" TextColor="#8E8FFB"></Label>
+                                            <Label Text="• 5 minutes ago" FontSize="11" TextColor="#959595"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="660" HorizontalTextAlignment="End" FontSize="18" TextColor="#282828"></Label>
+                                    <Label Text="FOLLOWERS" FontSize="11" TextColor="#959595"></Label>
+                                </StackLayout>
+                            </FlexLayout>
+                            <Label Text="My outfit for tonight. Come see me!" FontSize="16" TextColor="#282828" Margin="10, 15, 0, 15"></Label>
+                            <Image Source="MomAndChild" Aspect="AspectFill"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
